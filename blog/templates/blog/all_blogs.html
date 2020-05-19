@@ -1,1 +1,12 @@
-Hello blogs
+
+
+
+{% for blog in blogs %}
+    <h1>{{ blog.title }}</h1> | <h1>{{ blog.date }}</h1>
+    <p>{{ blog.description }}</p>
+
+    {% if blog.title_url %}
+        <a>{{ blog.title }}</a>
+    {% endif %}
+
+{% endfor %}
